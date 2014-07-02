@@ -36,7 +36,15 @@ a matrix struct
 * data can also just be stored in a column-major float array using the matrix struct and proper assignment of the dim values
 
 The function update_div is where the work is done.
-update_div(matrix W,matrix H,matrix X,float CONVERGE_THRESH,int max_iter,double t[10],int verbose);
+```cpp
+void update_div(
+        matrix W, matrix H, 
+        matrix X,
+        float CONVERGE_THRESH,
+        int max_iter,
+        double t[10],
+        int verbose);
+```
 
 * W, H are initial values for the factor matrices
 * X is the target matrix to be decomposed
