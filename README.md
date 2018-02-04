@@ -21,9 +21,9 @@ Bibtex entry:
 
 ### Implementation Details:
 
-Iterative NMF on Cuda: X = W*H  
-    multiplicative updates
-    divergence cost function
+Iterative NMF on Cuda: `X = W*H`  
+* multiplicative updates
+* divergence cost function
 
 
 nmf.cu contains an example usage of the update_div function.
@@ -46,12 +46,12 @@ void update_div(
         int verbose);
 ```
 
-* W, H are initial values for the factor matrices
-* X is the target matrix to be decomposed
-* CONVERGE_THRESH is the convergence threshold (expressed as a ratio of cost function change to cost function value)
-* max_iter is the maximum number of iterations
-* double t[10] is a pointer to a double array of at least size 10 that will contain individual timing results for different computational pieces.  (set this to NULL for normal use)
-* verbose set to 1 if you want more text output, 0 otherwise
+* `W`, `H` are initial values for the factor matrices
+* `X` is the target matrix to be decomposed
+* `CONVERGE_THRESH` is the convergence threshold (expressed as a ratio of cost function change to cost function value)
+* `max_iter` is the maximum number of iterations
+* `double t[10]` is a pointer to a double array of at least size 10 that will contain individual timing results for different computational pieces.  (set this to NULL for normal use)
+* `verbose` set to 1 if you want more text output, 0 otherwise
 
 
 
